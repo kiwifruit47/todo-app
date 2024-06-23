@@ -43,9 +43,9 @@ function App() {
       </div>
       
       <div className='todoList'>
-        {todoList.map((taskValue, key) => {
-          return <div key={index++} style={{backgroundColor: toBeDeleted === taskValue ? "#96C291" : "#D2649A"}} className='taskBox'>
-            {id}. {taskValue}
+        {todoList.map((taskValue, index) => {
+          return <div key={index} style={{backgroundColor: toBeDeleted === taskValue ? "#96C291" : "#D2649A"}} className='taskBox'>
+            {index + 1}. {taskValue}
             <button  className='doneBtn' onClick={() => deleteTask(taskValue)}>
               <MdOutlineDoneOutline style={{height: "2rem", width: "2rem", backgroundColor: toBeDeleted === taskValue ? "#96C291" : "#D2649A"}}/>
             </button>
